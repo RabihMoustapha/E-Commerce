@@ -1,0 +1,96 @@
+.description {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border: 0px solid #ccc;
+    border-radius: 8px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+header {
+    background-color: #f8f9fa;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: #333;
+
+    ul li {
+        list-style-type: none;
+        list-style-position: inside;
+        display: inline-block;
+        margin-right: 20px;
+        padding: 10px;
+        border-radius: 4px;
+        align-items: center;
+        white-space: nowrap;
+    }
+
+    a {
+        /* Text and Font Styles */
+        color: #333;
+        font-weight: bold;
+        font-size: 18px;
+        text-decoration: none;
+        font-family: 'Courier New', Courier, monospace;
+
+        /* Spacing and Alignment */
+        padding: 10px;
+        margin: 0 10px;
+        line-height: 1.5;
+
+        /* Layout */
+        display: inline-block;
+        text-align: center;
+        vertical-align: middle;
+
+        /* Color and Background */
+        background-color: #f8f9fa;
+        color: #333;
+        border-radius: 4px;
+    }
+
+    a:hover {
+        color: #007bff;
+        background-color: #e9ecef;
+    }
+}
+
+.welcome-message {
+    /* Typography */
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 1.5px;
+    color: #333;
+
+    /* Layout and Positioning */
+    background-color: #f8f9fa;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+footer {
+    /* Positioning */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    /* Styling */
+    display: flex;
+    justify-content: center;
+
+    /* Size and Spacing */
+    width: 100%;
+    padding: 10px;
+
+    /* Color and Background */
+    background-color: #f8f9fa;
+    color: #333;
+}

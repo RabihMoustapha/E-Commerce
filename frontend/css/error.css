@@ -1,0 +1,37 @@
+h1 {
+    /* Typography */
+    font-size: 2em;
+    font-weight: bold;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.2;
+
+    /* Color and Contrast */
+    color: #333;
+    background-color: #f0f0f0;
+
+    /* Spacing */
+    margin: 20px 0;
+    padding: 10px;
+
+    /* Alignment */
+    text-align: center;
+}
+
+p {
+    /* Typography */
+    font-size: 1em;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.5;
+    font-weight: normal;
+
+    /* Color and Contrast */
+    color: #666;
+    background-color: #f9f9f9;
+
+    /* Spacing */
+    margin: 10px 0;
+    padding: 5px;
+
+    /* Alignment */
+    text-align: center;
+}
