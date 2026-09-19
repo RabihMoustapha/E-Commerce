@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account</title>
+    <link rel="stylesheet" href="../css/create_account.css">
+    <script src="../js/create_account.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="orderpage.html">Order Page</a></li>
+                <li><a href="welcome.html">About US</a></li>
+                <li><a href="faq.html">FAQS</a></li>
+                <li><a href="contact_us.html">Contact US</a></li>
+                <li><a href="logout.html">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <form action="../../backend/create_account.py" method="post">
+            <h2>Create Account</h2>
+            <label for="username">Username</label>
+            <input type="text" id="username" name="username" required><br><br>
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" required><br><br>
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required><br><br>
+            <label for="image">Profile Picture (Optional)</label>
+            <input type="file" id="image" name="image"><br><br>
+            <input type="submit" value="Login" onclick=" return validateCreateForm()">
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Electronic ShopStore. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
