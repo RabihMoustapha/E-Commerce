@@ -1,11 +1,4 @@
 import psycopg2
-import os
 
-def connect_db():
-    return psycopg2.connect(
-        dbname: "e-commerce",
-        user: "postgres",
-        password: "",
-        host: "localhost",
-        port: "5432"
-    )
+conn = psycopg2.connect(host="localhost", database="e-commerce", user="postgres", password="", port=5432)
+cur = conn.cursor()
