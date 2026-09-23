@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FAQ</title>
-    <link rel="stylesheet" href="../css/faq.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/faq.css') }}">
+    <script src="{{ url_for('static', filename='js/faq.js') }}"></script>
 </head>
 
 <body>
@@ -25,42 +26,50 @@
 
         <div class="faq-item">
             <h2>Question 1: What is the return policy?</h2>
-            <p>Our return policy allows you to return products within 30 days of purchase. Please ensure the items are in their original condition.</p>
+            <p>Our return policy allows you to return products within 30 days of purchase. Please ensure the items are
+                in their original condition.</p>
         </div>
 
         <div class="faq-item">
             <h2>Question 2: How can I track my order?</h2>
-            <p>You can track your order by logging into your account and visiting the 'Orders' section. You will find tracking information for each order.</p>
+            <p>You can track your order by logging into your account and visiting the 'Orders' section. You will find
+                tracking information for each order.</p>
         </div>
 
         <div class="faq-item">
             <h2>Question 3: Do you offer international shipping?</h2>
-            <p>Yes, we offer international shipping to select countries. Shipping fees and delivery times may vary based on the destination.</p>
+            <p>Yes, we offer international shipping to select countries. Shipping fees and delivery times may vary based
+                on the destination.</p>
         </div>
 
         <div class="faq-item">
             <h2>Question 4: How can I contact customer support?</h2>
-            <p>You can reach our customer support team via the 'Contact' page on our website. We are available to assist you with any inquiries or issues.</p>
+            <p>You can reach our customer support team via the 'Contact' page on our website. We are available to assist
+                you with any inquiries or issues.</p>
         </div>
 
         <div class="faq-item">
             <h2>Question 5: What payment methods do you accept?</h2>
-            <p>We accept all major credit cards, debit cards, and PayPal payments. All transactions are processed securely through our payment gateway.</p>
+            <p>We accept all major credit cards, debit cards, and PayPal payments. All transactions are processed
+                securely through our payment gateway.</p>
         </div>
 
         <div class="faq-item">
             <h2>Question 6: Can I change or cancel my order?</h2>
-            <p>You can change or cancel your order within 24 hours of placing it. Please contact our customer support team for assistance.</p>
+            <p>You can change or cancel your order within 24 hours of placing it. Please contact our customer support
+                team for assistance.</p>
         </div>
 
         <div class="faq-item">
             <h2>Question 7: Are your products covered by a warranty?</h2>
-            <p>Yes, most of our products come with a manufacturer's warranty. Please refer to the product description for specific warranty details.</p>
+            <p>Yes, most of our products come with a manufacturer's warranty. Please refer to the product description
+                for specific warranty details.</p>
         </div>
 
         <div class="faq-item">
             <h2>Question 8: How do I create an account?</h2>
-            <p>You can create an account by clicking on the 'Sign Up' button on our homepage. Fill in the required information, and you'll be ready to shop!</p>
+            <p>You can create an account by clicking on the 'Sign Up' button on our homepage. Fill in the required
+                information, and you'll be ready to shop!</p>
         </div>
 
         <dialog id="faq-dialog">
