@@ -113,6 +113,19 @@ form {
         outline: none;
         box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
     }
+
+    p{
+        color: #333;
+        font-size: medium;
+        font-weight: 100;
+        border: 1px solid #004085;
+        padding: 10px;
+        margin: 10px 0;
+
+        a{
+            
+        }
+    }
 }
 
 footer{
