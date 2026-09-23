@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,13 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/logout.css') }}">
     <script src="{{ url_for('static', filename='js/logout.js') }}"></script>
 </head>
+
 <body>
     <script>
         // Clear session storage and redirect to login page
         sessionStorage.clear();
-        window.location.href = "login.html";
+        window.location.href = "{{ url_for('static', filename='html/login.html') }}";
     </script>
 </body>
+
 </html>
