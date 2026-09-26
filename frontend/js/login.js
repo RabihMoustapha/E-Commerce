@@ -1,11 +1,25 @@
-function validateLoginForm() {
-  var username = document.getElementById("username").value;
-  var password = document.getElementById("password").value;
-  if (username === "" || password === "") {
-    alert("Please fill in all fields.");
-    return false;
-  }
+async function validateLoginForm() {
+  const email = document.getElementById("email").value;
+  const password = document.getElementById("password").value;
 
-  window.location.href = "welcome.html";
-  return true;
+  try {
+    const response = await fetch('api/login', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application-json'
+      },
+      body: JSON.stringify({ email, password })
+    });
+
+    const result = await response.json();
+
+    if (result.success) {
+      alert("Login Successfully");
+      window.location.href = "home.html"
+    } else {
+      alert("Login Failed");
+    }
+  } catch {
+    console.error("Error: ", error);
+  }
 }

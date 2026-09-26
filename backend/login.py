@@ -2,22 +2,21 @@ import connection
 import bcrypt
 from flask import Flask, request
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="../frontend/html", static_folder="../frontend")
 
-@app.route("/login", methods=["GET", "POST"])
-def create():
-    password = request.form["password"]
-    email = request.form["email"]
+@app.route("api/login", methods=["POST"])
+def login():
+    data = request.get_json()
+    password = data.get("password")
+    email = data.get("email")
 
-    connection.cur.execute("Select From users (email, password_hash) values (%s, %s);", (email, password))
+    connection.cur.execute("Select * From users where email = %s and password_hash = %s", (email, password))
     user = connection.cur.fetchone()
-
-    connection.conn.commit()
 
     connection.cur.close()
     connection.conn.close()
 
-    if user and bcrypt.checkpw(password.encode('utf-8'), user[0].encode('utf-8')):
+    if user:
         return "Logged in"
     else:
         return "Incorrect username or password", 401
