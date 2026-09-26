@@ -1,8 +1,20 @@
 import connection
+import bcrypt
+from flask import Flask, request
 
-def create(user_id, user_name, user_email, user_password):
-    return connection.cur.execute("Insert into users (id, name, email, password) values (%i, %s, %s, %s);", (user_id, user_name, user_email, user_password))
+app = Flask(__name__)
 
-connection.conn.commit()
-connection.cur.close()
-connection.conn.close()
+@app.route("/create_account", methods=["POST"])
+def create():
+    id = request.form.get("id")
+    username = request.form["username"]
+    password = request.form["password"]
+    email = request.form["email"]
+
+    connection.cur.execute("Insert into users (id, username, email, password_hash) values (%i, %s, %s, %s);", (id, username, email, password))
+    user = connection.cur.fetchone()
+
+    connection.conn.commit()
+
+    connection.cur.close()
+    connection.conn.close()
