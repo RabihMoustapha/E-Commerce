@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Account</title>
     <link rel="stylesheet" href="../css/create_account.css">
-    <script src="../js/create_account.js"></script>
 </head>
 
 <body>
@@ -22,7 +21,7 @@
     </header>
 
     <main>
-        <form>
+        <form action="/api/create_account" method="POST">
             <h2>Create Account</h2>
             <label for="username">Username</label>
             <input type="text" id="username" name="username" required><br><br>
@@ -32,10 +31,12 @@
             <input type="email" id="email" name="email" required><br><br>
             <label for="image">Profile Picture (Optional)</label>
             <input type="file" id="image" name="image" accept=".jpg, .jpeg, .png"><br><br>
-            <input type="submit" value="Sign UP" onclick=" return validateCreateForm()">
+            <input type="submit" value="Sign UP">
         </form>
     </main>
 
+    <script src="../js/create_account.js"></script>
+    
     <footer>
         <p>&copy; 2024 Electronic ShopStore. All rights reserved.</p>
     </footer>

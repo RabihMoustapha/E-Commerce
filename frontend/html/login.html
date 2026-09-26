@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
     <link rel="stylesheet" href="../css/login.css">
-    <script src="../js/login.js"></script>
 </head>
 
 <body>
@@ -21,15 +20,17 @@
         </nav>
     </header>
 
-    <form action="/login" method="POST">
+    <form action="/api/login" method="POST">
         <h2>Login</h2>
         <label for="email">Email</label>
         <input type="text" id="email" name="email" required><br><br>
         <label for="password">Password</label>
         <input type="password" id="password" name="password" required><br><br>
-        <input type="submit" value="Login" onclick="validateLoginForm()">
+        <input type="submit" value="Login">
         <p>If you don't have an account! <a href="create_account.html">Create One</a></p>
     </form>
+
+    <script src="../js/login.js"></script>
 
     <footer>
         <p>&copy; 2024 Electronic ShopStore. All rights reserved.</p>
